@@ -2,6 +2,8 @@
 
 Bu proje, gRPC ve TypeScript kullanarak basit bir bildirim (notification) servisi örneği sunar.
 
+![image](https://github.com/user-attachments/assets/d7808a4a-dc64-452e-9c9e-69b68bdd8ec8)
+
 # Gereksinimler
 - Node.js
 - npm
