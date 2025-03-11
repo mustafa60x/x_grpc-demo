@@ -1,34 +1,42 @@
 # x_grpc-demo
 
+Bu proje, gRPC ve TypeScript kullanarak basit bir bildirim (notification) servisi örneği sunar.
+
+# Gereksinimler
+- Node.js
+- npm
+- Protobuf Compiler (protoc)
+- Global olarak yüklü grpc-tools ve ts-protoc-gen
+
+# Kurulum
+Bagimlilikları yükle:
 ```bash
 npm install @grpc/grpc-js @grpc/proto-loader ts-protoc-gen
 ```
 
+Global araçları yüklemek için:
 
+```bash
 # gRPC JS plugin için
 npm install -g grpc-tools
 
 # TypeScript plugin için
 npm install -g ts-protoc-gen
-
-
-
-
-## proto compile
-```bash
-protoc --proto_path=. --js_out=import_style=commonjs:. --grpc_out=grpc_js:. --ts_out=. notification.proto
 ```
 
+# Proto Dosyalarını Derleme
 
+Protobuf dosyalarını derlemek için aşağıdaki komutları kullanabilirsiniz. Bu komutlar, hem JavaScript hem de TypeScript çıktısı üretir:
 
+```bash
+protoc --proto_path=. \
+       --js_out=import_style=commonjs:. \
+       --grpc_out=grpc_js:. \
+       --ts_out=. \
+       notification.proto
+```
 
-## Run
-`node notification-service.js`
-
-
-
-# generate protos
-
+Alternatif:
 ```bash
 grpc_tools_node_protoc \
   --proto_path=. \
@@ -39,10 +47,16 @@ grpc_tools_node_protoc \
 ```
 
 
-********************************************
+# Notification Servisi Calistirma
 
+```bash
+node notification-service.js
+```
+
+# Diger Komutlar
+
+```bash
 protoc --version
-
 sudo apt update
 sudo apt install -y protobuf-compiler
 
@@ -53,12 +67,4 @@ export PATH="$HOME/.npm-global/bin:$PATH"
 
 grpc_tools_node_protoc --version
 protoc-gen-ts --version
-
-
-
-grpc_tools_node_protoc \
-  --proto_path=. \
-  --js_out=import_style=commonjs:. \
-  --grpc_out=grpc_js:. \
-  --ts_out=. \
-  notification.proto
+```
