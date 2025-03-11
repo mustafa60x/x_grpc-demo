@@ -1,0 +1,27 @@
+{
+  "name": "x_grpc-demo",
+  "version": "1.0.0",
+  "description": "```bash npm install @grpc/grpc-js @grpc/proto-loader ts-protoc-gen ```",
+  "main": "notification-service.js",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.13.0",
+    "@grpc/proto-loader": "^0.7.13",
+    "ts-protoc-gen": "^0.15.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mustafa60x/x_grpc-demo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/mustafa60x/x_grpc-demo/issues"
+  },
+  "homepage": "https://github.com/mustafa60x/x_grpc-demo#readme"
+}
